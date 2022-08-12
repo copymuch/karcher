@@ -52,7 +52,7 @@ header
 .promo_section_container
 	display: flex
 	justify-content: space-between
-
+	flex-wrap: wrap
 
 .promo_section_content
 	width: 35%
@@ -78,6 +78,16 @@ header
 			background-color: white
 			border: 2px solid #f6f6f6
 			margin-left: 18px
+@media (max-width: 1084px)
+	.promo_section_content 
+		width: 70%
+		text-align: center
+		margin: 0 auto
+		padding-bottom: 50px
+	.promo_section_img
+		width: 100%
+		text-align: center
+	
 .skills_section_container
 	display: flex
 	justify-content: center
@@ -97,7 +107,16 @@ header
 	display: flex
 	justify-content: center
 .specification_section_content
-	width: 28%
+	width: 100%
+	z-index: 2
+@media (max-width:902px)
+	.specification_section_container
+		position: relative
+	.specification_section_img
+		position: absolute
+		right: 100px
+		opacity: 0.6
+		z-index: 1
 .quote_section_container,figure
 	display: flex
 	justify-content: center
@@ -108,14 +127,24 @@ header
 		font-weight: 400
 		font-size: 36px
 		width: 61%
+		height: 18ex
 	figcaption
 		width: 100%
+		height: 30ex
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
 		div.people_info
-			height: 150%
+			margin: 0
+			padding: 0
+			width: 23ex
+			display: flex
+			flex-direction: column
+			align-items: center
 		p
 			margin: 0
 			padding: 0
-
 		p.people_name
 			color: black
 			font-family: 'Arvo', serif
@@ -130,10 +159,12 @@ header
 			padding-top: 5px
 .people_block
 	border-bottom: 3px solid #e8e9ed
+	height: 20ex
 .people_list 
 	display: flex
 	align-items: center
 	justify-content: center
+	height: 20ex
 	li
 		padding: 20px 100px 0 0
 		&:last-of-type
