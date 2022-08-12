@@ -1,0 +1,169 @@
+.wrapper {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.container {
+  width: 100%;
+  margin: 0 auto; }
+
+body, ul, nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #9e9e9e; }
+
+a, button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 3px; }
+
+h2, h3 {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-size: 36px; }
+
+h3 {
+  font-size: 22px; }
+
+header {
+  margin: 30px 0; }
+
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.header_nav ul {
+  display: flex;
+  flex-wrap: wrap; }
+  .header_nav ul li {
+    padding-left: 60px; }
+    .header_nav ul li a, .header_nav ul li button {
+      color: #9fa3a7; }
+    .header_nav ul li button {
+      background: none;
+      border: none;
+      padding: 0;
+      color: #757575; }
+
+.promo_section {
+  margin: 150px 0; }
+
+.promo_section_container {
+  display: flex;
+  justify-content: space-between; }
+
+.promo_section_content {
+  width: 35%; }
+  .promo_section_content h1 {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-size: 36px; }
+  .promo_section_content p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding-bottom: 40px;
+    color: #9e9e9e; }
+
+.promo_section_buttons {
+  width: 100%; }
+  .promo_section_buttons a {
+    color: #292929;
+    padding: 20px 55px;
+    background-color: #ffc80a;
+    border-radius: 50px; }
+    .promo_section_buttons a:last-of-type {
+      padding: 20px 40px;
+      background-color: white;
+      border: 2px solid #f6f6f6;
+      margin-left: 18px; }
+
+.skills_section_container {
+  display: flex;
+  justify-content: center; }
+
+.skills_section_content {
+  width: 35%;
+  padding-right: 90px; }
+
+.skills_section_list_block {
+  width: 28%; }
+
+.skills_section_list_item {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px; }
+  .skills_section_list_item:last-of-type {
+    border-top: 1px solid #d1d1d1;
+    padding-top: 40px; }
+
+.specification_section_container {
+  display: flex;
+  justify-content: center; }
+
+.specification_section_content {
+  width: 28%; }
+
+.quote_section_container, figure {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+  .quote_section_container blockquote, figure blockquote {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-size: 36px;
+    width: 61%; }
+  .quote_section_container figcaption, figure figcaption {
+    width: 100%; }
+    .quote_section_container figcaption div.people_info, figure figcaption div.people_info {
+      height: 150%; }
+    .quote_section_container figcaption p, figure figcaption p {
+      margin: 0;
+      padding: 0; }
+    .quote_section_container figcaption p.people_name, figure figcaption p.people_name {
+      color: black;
+      font-family: "Arvo", serif;
+      font-weight: 400;
+      font-size: 22px;
+      padding-top: 15px; }
+    .quote_section_container figcaption p.people_spec, figure figcaption p.people_spec {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 3px;
+      padding-top: 5px; }
+
+.people_block {
+  border-bottom: 3px solid #e8e9ed; }
+
+.people_list {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .people_list li {
+    padding: 20px 100px 0 0; }
+    .people_list li:last-of-type {
+      padding: 20px 0 0 0; }
+  .people_list img {
+    width: 100%;
+    transition-property: width; }
+  .people_list img:hover {
+    transition: 0.2s ease; }
+
+.width {
+  border: 1px solid #000; }
+  .width img {
+    width: 500%; }
+
+/*# sourceMappingURL=styles.css.map */
