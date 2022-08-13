@@ -10,6 +10,7 @@ let cImage = document.querySelector('li.people_list_item_center > img');
 let pName = document.querySelector('.people_name');
 let pInf = document.querySelector('.people_info');
 
+
 pInf.style.textAlign = 'center';
 
 pImage.forEach(function(image){
