@@ -9,16 +9,17 @@ let para = document.querySelector('blockquote');
 let cImage = document.querySelector('li.people_list_item_center > img');
 let pName = document.querySelector('.people_name');
 let pInf = document.querySelector('.people_info');
-
+let lArrow = document.querySelector('.arrow_left');
+let rArrow = document.querySelector('.arrow_right');
 
 pInf.style.textAlign = 'center';
 
 pImage.forEach(function(image){
 	image.onmouseover = function(){
-	let pSrc = image.getAttribute('id');
-	let cSrc = cImage.getAttribute('id');
+	let pId = image.getAttribute('id');
+	let cId = cImage.getAttribute('id');
 	pInf.style.textAlign = null;
-	switch(pSrc){
+	switch(pId){
 		case 'p1':
 			pName.textContent = 'Лера Винчестер';
 			p1.style.width = '150%';
@@ -71,5 +72,12 @@ pImage.forEach(function(image){
 			break;		
 	}
 }
-
+	rArrow.onclick = function(){
+		let pSrc = image.getAttribute('src');
+		let pId = image.getAttribute('id');
+		let pList = document.querySelector('.people_list');
+		for (let i = pImage.length - 1; i >= 0; i--) {
+			console.log(pImage[i]);
+		}
+	}
 });

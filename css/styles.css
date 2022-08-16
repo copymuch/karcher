@@ -55,6 +55,32 @@ header {
       padding: 0;
       color: #757575; }
 
+.burger {
+  width: 35px;
+  height: 22px;
+  position: relative;
+  float: left;
+  display: none; }
+  .burger span {
+    background-color: grey;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    border: 1px solid grey;
+    border-radius: 20px; }
+  .burger .span_top {
+    top: 0px; }
+  .burger .span_middle {
+    top: 9px; }
+  .burger .span_bottom {
+    bottom: 0px; }
+
+@media (max-width: 735px) {
+  .burger {
+    display: block; }
+
+  .header_nav ul {
+    display: none; } }
 .promo_section, header {
   animation: fade 1s ease-in-out; }
 
@@ -102,6 +128,9 @@ header {
   .promo_section_img {
     width: 100%;
     text-align: center; } }
+@media (max-width: 658px) {
+  .promo_section_img img {
+    width: 90%; } }
 .skills_section {
   position: relative;
   animation: lefty 1s ease; }
@@ -139,7 +168,7 @@ header {
 
   .specification_section_img {
     position: absolute;
-    right: 100px;
+    right: 0px;
     opacity: 0.6;
     z-index: 1; } }
 .quote_section_container, figure {
@@ -185,7 +214,8 @@ header {
 
 .people_block {
   border-bottom: 3px solid #e8e9ed;
-  height: 20ex; }
+  height: 20ex;
+  position: relative; }
 
 .people_list {
   display: flex;
@@ -202,6 +232,23 @@ header {
   .people_list img:hover {
     transition: 0.2s ease; }
 
+.arrow_div {
+  position: absolute;
+  width: 7%;
+  display: none; }
+
+.arrow_left {
+  right: 50px; }
+
+.arrow_right {
+  left: 50px; }
+
+@media (max-width: 841px) {
+  .people_fade {
+    display: none; }
+
+  .arrow_div {
+    display: block; } }
 .form_section {
   margin: 150px 0; }
 
@@ -239,6 +286,14 @@ header {
     padding: 14px 18px;
     float: right; }
 
+@media (max-width: 1116px) {
+  .form_section_container {
+    flex-wrap: wrap; }
+
+  .form_section_content {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center; } }
 .footer {
   margin: 100px 0 0 0;
   padding: 50px 5px 30px 5px;
@@ -263,6 +318,23 @@ header {
   .footer_ps p {
     font-weight: 700; }
 
+@media (max-width: 1030px) {
+  .footer_nav ul {
+    flex-direction: column;
+    align-items: center; }
+    .footer_nav ul li {
+      padding: 20px 0 0 0; }
+      .footer_nav ul li:last-of-type {
+        padding: 20px 0 0 0; }
+      .footer_nav ul li a {
+        font-size: 16px; }
+
+  .footer_content {
+    flex-direction: column;
+    align-items: center; }
+
+  .footer_social ul {
+    padding: 20px 0; } }
 @keyframes fade {
   from {
     opacity: 0; }
