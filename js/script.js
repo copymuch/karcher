@@ -5,7 +5,7 @@ button.onclick = function(){
 	alert('Пока нет возможности покупки!');
 }
 let pImage = document.querySelectorAll('.people_img');
-let para = document.querySelector('blockquote');
+let para = document.querySelector('blockquote p');
 let cImage = document.querySelector('li.people_list_item_center > img');
 let pName = document.querySelector('.people_name');
 let pInf = document.querySelector('.people_info');
@@ -81,3 +81,9 @@ pImage.forEach(function(image){
 		}
 	}
 });
+
+let burger = document.querySelector('.burger');
+
+burger.onclick = function(){
+	console.log('pressed');
+}

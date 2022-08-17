@@ -15,7 +15,7 @@ p
 	font-weight: 400
 	font-size: 14px
 	color: #9e9e9e
-a,button,label
+a,button,label,::placeholder
 	font-family: 'Roboto', sans-serif
 	font-weight: 700
 	font-size: 12px
@@ -93,16 +93,20 @@ header
 		color: #9e9e9e
 .promo_section_buttons
 	width: 100%
+	ul
+		display: flex
+		justify-content: center
+.bttn_item
+	padding: 20px 55px
+	background-color: #ffc80a
+	border-radius: 50px
+	&:last-of-type
+		padding: 20px 40px
+		background-color: white
+		border: 2px solid #f6f6f6
+		margin-left: 18px
 	a
 		color: #292929
-		padding: 20px 55px
-		background-color: #ffc80a
-		border-radius: 50px
-		&:last-of-type
-			padding: 20px 40px
-			background-color: white
-			border: 2px solid #f6f6f6
-			margin-left: 18px
 @media (max-width: 1084px)
 	.promo_section_content 
 		width: 70%
@@ -116,12 +120,18 @@ header
 	.promo_section_img
 		img
 			width: 90%
+	.promo_section_buttons
+		height: 20ex
+		a
+			&:last-of-type
+				margin: 350px 0 0 0
 .skills_section
 	position: relative
 	animation: lefty 1s ease
 .skills_section_container
 	display: flex
 	justify-content: center
+	flex-wrap: wrap
 .skills_section_content
 	width: 35%
 	padding-right: 90px
@@ -134,12 +144,31 @@ header
 	&:last-of-type
 		border-top: 1px solid #d1d1d1
 		padding-top: 40px
+@media (max-width:856px)
+	.skills_section_content
+		width: 100%
+		text-align: center
+		padding: 0
+	.skills_section_list
+		display: flex
+		justify-content: space-between
+	.skills_section_list_block
+		width: 100%
+		padding-top: 50px
+	.skills_section_list_item:last-of-type
+		border-top: none
+		padding: 0
+@media (max-width:696px)
+	.skills_section_list
+		flex-direction: column
 .specification_section_container
 	display: flex
 	justify-content: center
 .specification_section_content
 	width: 100%
 	z-index: 2
+	p
+		color: black
 @media (max-width:902px)
 	.specification_section_container
 		position: relative
@@ -153,12 +182,14 @@ header
 	justify-content: center
 	flex-direction: column
 	align-items: center
-	blockquote
+	blockquote p
 		font-family: 'Arvo', serif
 		font-weight: 400
 		font-size: 36px
 		width: 61%
 		height: 18ex
+		margin: 0 auto
+		color: black
 	figcaption
 		width: 100%
 		height: 30ex
@@ -188,6 +219,16 @@ header
 			font-size: 12px
 			letter-spacing: 3px
 			padding-top: 5px
+@media (max-width: 826px)
+	.blockquote_figure blockquote p
+		width: 100%
+@media(max-width:630px)
+	.blockquote_figure blockquote p
+		font-size: 30px
+		height: 20ex
+@media(max-width:505px)
+	.blockquote_figure blockquote p
+		font-size: 18px
 .people_block
 	border-bottom: 3px solid #e8e9ed
 	height: 20ex
@@ -208,6 +249,7 @@ header
 		transition: .2s ease
 .arrow_div
 	position: absolute
+	max-width: 100%
 	width: 7%
 	display: none
 .arrow_left
@@ -219,32 +261,40 @@ header
 		display: none
 	.arrow_div
 		display: block
+@media (max-width: 630px)
+	.people_list li
+		padding: 0 50px 0 0
 .form_section
 	margin: 150px 0
 .form_section_container
 	display: flex
 	justify-content: center
+.form_section_img
+	img
+		width: 100%
 .form_section_content
 	display: flex
 	flex-direction: column
 	width: 100%
 	align-items: flex-start
 	margin-top: 50px
+	form
+		width: 100%
 	.form_input
 		display: flex
-		width: 100%
 		justify-content: flex-end
 		margin: 0
 		padding: 0 0 25px 0
+		width: 100%
 	label
 		color: #9e9e9e
 	input
-		&[class=text]
+		&.text
 			margin: 0
 			border: none
 			border-bottom: 1px solid #9e9e9e
 			outline: none
-			width: 320px
+			width: 67%
 		&[type=submit]
 			background-color: #ffc80a
 			color : white
@@ -254,13 +304,39 @@ header
 			border-radius: 50px
 			padding: 14px 18px
 			float: right
+		&.little
+			display: none
 @media (max-width: 1116px)
 	.form_section_container
 		flex-wrap: wrap
 	.form_section_content
 		margin: 0 auto
-		justify-content: center
+		justify-content: flex-start
 		align-items: center
+		input.text
+			width: 83%
+		.form_input
+		label
+			width: 10%
+		form
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+@media (max-width:843px)
+	label
+		display: none
+	.form_section_content
+		input
+			&.text
+				width: 100%
+			&.little
+				display: block
+			&.large
+				display: none
+			&::placeholder
+				opacity: .5
 .footer
 	margin: 100px 0 0 0
 	padding: 50px 5px 30px 5px
@@ -285,6 +361,7 @@ header
 	.footer_nav ul
 		flex-direction: column
 		align-items: center
+		text-align: center
 		li
 			padding: 20px 0 0 0
 			&:last-of-type
@@ -296,6 +373,8 @@ header
 		align-items: center
 	.footer_social ul
 		padding: 20px 0
+@media(max-width:385px)
+
 @keyframes fade 
 	from 
 		opacity: 0
